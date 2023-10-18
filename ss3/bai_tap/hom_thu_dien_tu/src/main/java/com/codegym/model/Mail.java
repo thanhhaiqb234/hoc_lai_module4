@@ -1,16 +1,16 @@
 package com.codegym.model;
 
-public class Setting {
+public class Mail {
     private int id;
     private String languages;
     private int size;
     private boolean spamsFilter;
     private String signature;
 
-    public Setting() {
+    public Mail() {
     }
 
-    public Setting(int id, String languages, int size, boolean spamsFilter, String signature) {
+    public Mail(int id, String languages, int size, boolean spamsFilter, String signature) {
         this.id = id;
         this.languages = languages;
         this.size = size;
@@ -18,7 +18,7 @@ public class Setting {
         this.signature = signature;
     }
 
-    public Setting(String languages, int size, boolean spamsFilter, String signature) {
+    public Mail(String languages, int size, boolean spamsFilter, String signature) {
         this.languages = languages;
         this.size = size;
         this.spamsFilter = spamsFilter;

@@ -1,6 +1,6 @@
 package com.codegym.service;
 
-import com.codegym.model.Setting;
+import com.codegym.model.Mail;
 import com.codegym.repository.ISettingRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,12 +12,12 @@ public class SettingService implements ISettingService{
     private ISettingRepository settingRepository;
 
     @Override
-    public List<Setting> getAll() {
+    public List<Mail> getAll() {
         return settingRepository.getAll();
     }
 
     @Override
-    public Setting editSetting(int id) {
+    public Mail editSetting(int id) {
         return settingRepository.editSetting(id);
     }
 
@@ -32,7 +32,7 @@ public class SettingService implements ISettingService{
     }
 
     @Override
-    public void updateSetting(Setting setting) {
+    public void updateSetting(Mail setting) {
         settingRepository.updateSetting(setting);
     }
 }

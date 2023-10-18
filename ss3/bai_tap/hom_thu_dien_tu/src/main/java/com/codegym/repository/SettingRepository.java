@@ -1,19 +1,19 @@
 package com.codegym.repository;
 
-import com.codegym.model.Setting;
+import com.codegym.model.Mail;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 @Repository
 public class SettingRepository implements ISettingRepository{
-    private static List<Setting> settingList = new ArrayList<>();
+    private static List<Mail> settingList = new ArrayList<>();
     private static  List<String> stringList = new ArrayList<>();
 
     private static List<Integer> integerList = new ArrayList<>();
 
     static {
-        settingList.add(new Setting(1,"VIET NAM",15,true,"King,Asgard"));
+        settingList.add(new Mail(1,"Vietnamese",15,true,"King,Asgard"));
 
         stringList.add("English");
         stringList.add("Vietnamese");
@@ -29,12 +29,12 @@ public class SettingRepository implements ISettingRepository{
     }
 
     @Override
-    public List<Setting> getAll() {
+    public List<Mail> getAll() {
         return settingList;
     }
 
     @Override
-    public Setting editSetting(int id) {
+    public Mail editSetting(int id) {
         for (int i = 0; i < settingList.size(); i++) {
             if (settingList.get(i).getId() == id){
                 return settingList.get(i);
@@ -54,7 +54,7 @@ public class SettingRepository implements ISettingRepository{
     }
 
     @Override
-    public void updateSetting(Setting setting) {
+    public void updateSetting(Mail setting) {
         for (int i = 0; i < settingList.size(); i++) {
             if (settingList.get(i).getId() == setting.getId()){
                 settingList.get(i).setLanguages(setting.getLanguages());

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" action="/product/update">
+    <table>
+            <tr>
+               <td>
+                   <br><br>
+                   Id :
+                   <input th:field="*{product.id}" >
+                   <br><br>
+               </td>
+            </tr>
+            <tr>
+                <td>
+                    Name :
+                    <input th:field="*{product.name}" >
+                    <br><br>
+                </td>
+            </tr>
+            <tr>
+               <td>
+                   Price :
+                   <input th:field="*{product.price}" >
+                   <br><br>
+               </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Describe
+                    <input th:field="*{product.describe}" >
+                    <br><br>
+                </td>
+            </tr>
+
+            <tr>
+               <td>
+                   Producer
+                   <input th:field="*{product.producer}" >
+                   <br><br>
+               </td>
+            </tr>
+
+        <tr>
+            <td>
+                <button><a th:href="@{/product/list}" style="text-decoration: none ; color:black;">Cancel</a></button>
+            </td>
+            <td>
+                <button type="submit">Save</button>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

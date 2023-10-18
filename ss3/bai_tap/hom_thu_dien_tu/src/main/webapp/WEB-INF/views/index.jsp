@@ -32,7 +32,8 @@
             </c:choose>
             <td><c:out value="${setting.signature}"/></td>
             <td>
-                <button><a href="/setting/edit/form/${setting.id}" style="text-decoration: none ; color: black">Edit</a>
+                <button>
+                    <a href="/setting/edit/form/${setting.id}" style="text-decoration: none ; color: black">Edit</a>
                 </button>
             </td>
 

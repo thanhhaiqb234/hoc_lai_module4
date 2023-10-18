@@ -1,17 +1,17 @@
 package com.codegym.repository;
 
-import com.codegym.model.Setting;
+import com.codegym.model.Mail;
 
 import java.util.List;
 
 public interface ISettingRepository {
-    List<Setting> getAll();
+    List<Mail> getAll();
 
-    Setting editSetting(int id);
+    Mail editSetting(int id);
 
     List getAllSize();
 
     List getAllLanguages();
 
-    void updateSetting(Setting setting);
+    void updateSetting(Mail setting);
 }

@@ -1,8 +1,7 @@
 package com.codegym.controller;
 
-import com.codegym.model.Setting;
+import com.codegym.model.Mail;
 import com.codegym.service.ISettingService;
-import com.sun.tracing.dtrace.ModuleAttributes;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,7 +20,7 @@ public class SettingController {
 
     @GetMapping("/list")
     public String showSettingList(Model model){
-        List<Setting> settings = settingService.getAll();
+        List<Mail> settings = settingService.getAll();
         model.addAttribute("settings",settings);
         return "index";
     }
@@ -29,7 +28,7 @@ public class SettingController {
     @GetMapping("/edit/form/{id}")
     public String showForm(Model model,
                            @PathVariable int id){
-        Setting setting = settingService.editSetting(id);
+        Mail setting = settingService.editSetting(id);
         List<Integer> integerList = settingService.getAllSize();
         List<String> stringList = settingService.getAllLanguages();
         model.addAttribute("setting",setting);
@@ -40,8 +39,8 @@ public class SettingController {
 
     @PostMapping("/form/update")
     public String updateSetting(RedirectAttributes redirectAttributes ,
-                                @ModelAttribute Setting setting){
-        settingService.updateSetting(setting);
+                                @ModelAttribute Mail mail){
+        settingService.updateSetting(mail);
         return "redirect:/setting/list";
     }
 }
