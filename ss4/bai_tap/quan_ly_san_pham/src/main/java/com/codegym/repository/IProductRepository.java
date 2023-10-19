@@ -15,4 +15,6 @@ public interface IProductRepository {
     void createProduct(Product product);
 
     List<Product> searchNameProduct(String name);
+
+    Product getProduct(int id);
 }
