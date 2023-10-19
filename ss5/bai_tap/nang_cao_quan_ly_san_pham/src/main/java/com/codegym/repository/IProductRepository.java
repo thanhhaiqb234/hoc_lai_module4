@@ -2,19 +2,18 @@ package com.codegym.repository;
 
 import com.codegym.model.Product;
 
-import java.awt.*;
 import java.util.List;
 
 public interface IProductRepository {
     List<Product> getAllProduct();
 
-    void updateProduct(Product product);
-
-    void deleteProduct(int id);
+    Product getProduct(int id);
 
     void createProduct(Product product);
 
-    List<Product> searchNameProduct(String name);
+    void updateProruct(Product product);
 
-    Product getProduct(int id);
+    void deleteProduct(int id);
+
+    List<Product> searchProduct(String name);
 }

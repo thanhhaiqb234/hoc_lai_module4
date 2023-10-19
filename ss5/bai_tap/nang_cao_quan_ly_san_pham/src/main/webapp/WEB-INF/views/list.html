@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+<form method="get" action="/product/form/create" style="padding-left: 1%;padding-top: 1%">
+    <br>
+    <button type="submit"><h4>Create Product</h4></button>
+</form>
+<form method="get" action="/product/search">
+    <br>
+    <input name="name" id="name" placeholder="Enter the product name you want to search for" style="width: 350px">
+    <button type="submit">Search</button>
+</form>
+<table class="table table-hover">
+    <tr>
+        <th>Stt</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Describe</th>
+        <th>producer</th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr th:each="product , static : ${productList}">
+        <td th:text="${static.count}"></td>
+        <td th:text="${product.name}"></td>
+        <td th:text="${product.price}"></td>
+        <td th:text="${product.describes}"></td>
+        <td th:text="${product.producer}"></td>
+        <td>
+            <button>
+                <a th:href="@{/product/details/__${product.id}__}" style="text-decoration: none ; color: black">Details</a>
+            </button>
+        </td>
+        <td>
+            <button>
+                <a th:href="@{/product/edit/__${product.id}__}"style="text-decoration: none ; color: black">Edit</a>
+            </button>
+        </td>
+        <td>
+            <button>
+                <a th:href="@{/product/delete/__${product.id}__}"style="text-decoration: none ; color: black">Delete</a>
+            </button>
+        </td>
+    </tr>
+
+</table>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</html>

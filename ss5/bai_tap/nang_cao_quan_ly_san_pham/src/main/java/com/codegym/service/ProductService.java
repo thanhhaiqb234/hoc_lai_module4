@@ -5,7 +5,6 @@ import com.codegym.repository.IProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -14,7 +13,6 @@ public class ProductService implements IProductService{
     @Autowired
     private IProductRepository productRepository;
 
-
     @Override
     public List<Product> getAllProduct() {
         return productRepository.getAllProduct();
@@ -22,17 +20,7 @@ public class ProductService implements IProductService{
 
     @Override
     public Product getProduct(int id) {
-      return productRepository.getProduct(id);
-    }
-
-    @Override
-    public void updateProduct(Product product) {
-        productRepository.updateProduct(product);
-     }
-
-    @Override
-    public void deleteProduct(int id) {
-        productRepository.deleteProduct(id);
+        return productRepository.getProduct(id);
     }
 
     @Override
@@ -41,7 +29,17 @@ public class ProductService implements IProductService{
     }
 
     @Override
-    public List<Product> searchNameProduct(String name) {
-        return productRepository.searchNameProduct(name);
+    public void updateProduct(Product product) {
+        productRepository.updateProruct(product);
+    }
+
+    @Override
+    public void deleteProduct(int id) {
+        productRepository.deleteProduct(id);
+    }
+
+    @Override
+    public List<Product> searchProduct(String name) {
+        return productRepository.searchProduct(name);
     }
 }
