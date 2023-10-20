@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" action="/blog/update">
+    <table>
+        <tr>
+            <td>
+                <input th:field="*{blog.blogId}" style="display: none">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Name :
+                <input th:field="*{blog.blogName}" >
+                <br><br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Describe
+                <input th:field="*{blog.blogDescribe}" >
+                <br><br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button><a th:href="@{/blog/list}" style="text-decoration: none ; color:black;">Cancel</a></button>
+            </td>
+            <td>
+                <button type="submit">Save</button>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

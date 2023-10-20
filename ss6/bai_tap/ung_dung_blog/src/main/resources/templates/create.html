@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:object="${blog}" method="post" action="/blog/create" style="padding-left: 39%">
+    <table style="text-align: center">
+        <tr>
+            <h3>
+                Form Create BLog
+            </h3>
+        </tr>
+        <tr>
+            <td>
+                Name : <input th:field="*{blogName}">
+                <br><br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Describe : <input th:field="*{blogDescribe}">
+                <br><br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button th:href="@{/blog/list}">Cancel</button>
+            </td>
+            <td>
+                <button type="submit">Save</button>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
