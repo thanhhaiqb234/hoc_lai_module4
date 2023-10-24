@@ -10,8 +10,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
 @Controller
 @RequestMapping("/blog")
 public class BlogController {
@@ -19,13 +17,17 @@ public class BlogController {
     @Autowired
     private IBlogService blogService;
 
-    @GetMapping("/list")
-    public String getAllBlog(@RequestParam(defaultValue = "0",required = false) int page,
+    @GetMapping("/list/{id}")
+    public String getAllBlog(@PathVariable int id,
+                             @RequestParam(defaultValue = "" , required = false) String searchName,
+                             @RequestParam(defaultValue = "0",required = false)int page,
+                             Pageable pageable,
                              Model model){
-        Pageable pageable = PageRequest.of(page,3);
-        Page<Blog> blogPage = blogService.getAllBlog(pageable);
-        model.addAttribute("blogList",blogPage);
-        return "list";
+
+        pageable = PageRequest.of(page,2);
+        Page<Blog> blogPage = blogService.findAll(pageable,id , searchName);
+        model.addAttribute("blogPage" , blogPage);
+        return "list-blog";
     }
 
     @GetMapping("/details/{id}")
@@ -33,33 +35,33 @@ public class BlogController {
                               Model model){
         Blog blog = blogService.getBlog(id);
         model.addAttribute("blog" , blog);
-        return "details";
+        return "details-blog";
     }
     @GetMapping("/edit/{id}")
     public String getBlog(@PathVariable int id ,
                           Model model){
         Blog blog = blogService.getBlog(id);
         model.addAttribute("blog",blog);
-        return "edit";
+        return "edit-blog";
     }
 
     @PostMapping("/update")
     public String updateBlog(@ModelAttribute Blog blog){
         blogService.updateBlog(blog);
-        return "redirect:/blog/list";
+        return "redirect:/blog/list/{id}";
     }
 
     @GetMapping("/delete/{id}")
     public String deleteBlog(@PathVariable int id){
         blogService.deleteBlog(id);
-        return "redirect:/blog/list";
+        return "redirect:/blog/list{id}";
     }
 
     @GetMapping("/form/create")
     public String formCreateBlog(Model model){
         Blog blog = new Blog();
         model.addAttribute("blog",blog);
-        return "create";
+        return "create-blog";
     }
 
     @PostMapping("/create")

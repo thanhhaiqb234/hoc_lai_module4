@@ -16,4 +16,6 @@ public interface IBlogService {
 
     void createBlog(Blog blog);
     Page<Blog> getAllBlog(Pageable pageable);
+
+    Page<Blog> findAll(Pageable pageable, int categoryId, String searchName);
 }

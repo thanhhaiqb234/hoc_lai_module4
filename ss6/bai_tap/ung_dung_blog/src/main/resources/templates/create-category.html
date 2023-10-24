@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:object="${category}" method="post" action="/category/create" style="padding-left: 39%">
+  <table style="text-align: center">
+    <tr>
+      <h3>
+        Form Create Category
+      </h3>
+    </tr>
+    <tr>
+      <td>
+        Name : <input th:field="*{categoryName}">
+        <br><br>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <button th:href="@{/category/list}">Cancel</button>
+      </td>
+      <td>
+        <button type="submit">Save</button>
+      </td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

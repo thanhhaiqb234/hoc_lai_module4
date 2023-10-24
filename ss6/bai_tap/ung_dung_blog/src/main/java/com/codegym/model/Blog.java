@@ -1,9 +1,7 @@
 package com.codegym.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 public class Blog {
@@ -13,13 +11,18 @@ public class Blog {
     private String blogName;
     private  String blogDescribe;
 
+    @ManyToOne
+    @JoinColumn(name = "category_id" )
+    private Category category;
+
     public Blog() {
     }
 
-    public Blog(int blogId, String blogName, String blogDescribe) {
+    public Blog(int blogId, String blogName, String blogDescribe, Category category) {
         this.blogId = blogId;
         this.blogName = blogName;
         this.blogDescribe = blogDescribe;
+        this.category = category;
     }
 
     public int getBlogId() {
@@ -46,4 +49,11 @@ public class Blog {
         this.blogDescribe = blogDescribe;
     }
 
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
 }
