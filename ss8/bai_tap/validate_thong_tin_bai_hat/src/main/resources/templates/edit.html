@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:object="${songDto}" action="/song/update/song" method="post">
+    <div>
+        <h2>Form Edit Song</h2>
+    </div>
+    <div>
+        <input th:field="*{idSong}" style="display: none">
+    </div>
+    <div>
+        Name Song :
+        <input th:field="*{nameSong}"><br><br>
+        <span th:if="${#fields.hasErrors('nameSong')}" th:errors="*{nameSong}" style="color: red"></span>
+        <br><br>
+        <br>
+    </div>
+    <div>
+        Singer :
+        <input th:field="*{artistName}"><br><br>
+        <span th:if="${#fields.hasErrors('artistName')}" th:errors="*{artistName}"style="color: red"></span>
+        <br><br>
+        <br>
+    </div>
+    <div>
+        Kind Of Music :
+        <input th:field="*{categorySong}"><br><br>
+        <span th:if="${#fields.hasErrors('categorySong')}" th:errors="*{categorySong}"style="color: red"></span>
+        <br><br>
+        <br>
+    </div>
+    <div>
+        <button>
+            <a th:href="@{/song/list}">Cancel</a>
+        </button>
+        <button type="submit">
+            Save
+        </button>
+    </div>
+</form>
+</body>
+</html>

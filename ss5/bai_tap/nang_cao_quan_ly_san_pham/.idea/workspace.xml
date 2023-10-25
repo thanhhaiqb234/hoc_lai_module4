@@ -5,17 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2fa6c41-569e-4dba-81a6-a926648a9359" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../ss6/bai_tap/ung_dung_blog/src/main/java/com/codegym/controller/BlogController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss6/bai_tap/ung_dung_blog/src/main/java/com/codegym/model/Blog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss6/bai_tap/ung_dung_blog/src/main/java/com/codegym/repository/IBlogRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss6/bai_tap/ung_dung_blog/src/main/java/com/codegym/service/BlogService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss6/bai_tap/ung_dung_blog/src/main/java/com/codegym/service/IBlogService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss6/bai_tap/ung_dung_blog/src/main/resources/templates/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss6/bai_tap/ung_dung_blog/src/main/resources/templates/details.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss6/bai_tap/ung_dung_blog/src/main/resources/templates/edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss6/bai_tap/ung_dung_blog/src/main/resources/templates/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss8/bai_tap/validate_thong_tin_bai_hat/src/main/java/com/codegym/controller/SongController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss8/bai_tap/validate_thong_tin_bai_hat/src/main/java/com/codegym/dto/SongDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss8/bai_tap/validate_thong_tin_bai_hat/src/main/java/com/codegym/model/Song.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss8/bai_tap/validate_thong_tin_bai_hat/src/main/java/com/codegym/repository/ISongRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss8/bai_tap/validate_thong_tin_bai_hat/src/main/java/com/codegym/service/ISongService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss8/bai_tap/validate_thong_tin_bai_hat/src/main/java/com/codegym/service/SongService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss8/bai_tap/validate_thong_tin_bai_hat/src/main/resources/templates/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss8/bai_tap/validate_thong_tin_bai_hat/src/main/resources/templates/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss6/bai_tap/ung_dung_blog/src/main/java/com/codegym/controller/BlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss6/bai_tap/ung_dung_blog/src/main/java/com/codegym/controller/BlogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss6/bai_tap/ung_dung_blog/src/main/java/com/codegym/service/BlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss6/bai_tap/ung_dung_blog/src/main/java/com/codegym/service/BlogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss6/bai_tap/ung_dung_blog/src/main/java/com/codegym/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss6/bai_tap/ung_dung_blog/src/main/java/com/codegym/service/CategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss6/bai_tap/ung_dung_blog/src/main/java/com/codegym/service/IBlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss6/bai_tap/ung_dung_blog/src/main/java/com/codegym/service/IBlogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss6/bai_tap/ung_dung_blog/src/main/resources/templates/list-blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss6/bai_tap/ung_dung_blog/src/main/resources/templates/list-blog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss6/bai_tap/ung_dung_blog/src/main/resources/templates/list-category.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss6/bai_tap/ung_dung_blog/src/main/resources/templates/list-category.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss8/bai_tap/validate_form_dang_nhap/src/main/java/com/codegym/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss8/bai_tap/validate_form_dang_nhap/src/main/java/com/codegym/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss8/bai_tap/validate_form_dang_nhap/src/main/java/com/codegym/dto/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss8/bai_tap/validate_form_dang_nhap/src/main/java/com/codegym/dto/UserDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss8/bai_tap/validate_form_dang_nhap/src/main/java/com/codegym/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss8/bai_tap/validate_form_dang_nhap/src/main/java/com/codegym/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss8/bai_tap/validate_form_dang_nhap/src/main/java/com/codegym/service/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss8/bai_tap/validate_form_dang_nhap/src/main/java/com/codegym/service/IUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss8/bai_tap/validate_form_dang_nhap/src/main/java/com/codegym/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss8/bai_tap/validate_form_dang_nhap/src/main/java/com/codegym/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss8/bai_tap/validate_form_dang_nhap/src/main/resources/templates/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss8/bai_tap/validate_form_dang_nhap/src/main/resources/templates/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss8/bai_tap/validate_form_dang_nhap/src/main/resources/templates/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss8/bai_tap/validate_form_dang_nhap/src/main/resources/templates/list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,21 +78,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/codegym/hoc_lai_module_4/ss5/bai_tap/nang_cao_quan_ly_san_pham",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "spring.configuration.checksum": "9dddc9b686e0513298ffbe18404e3240",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/codegym/hoc_lai_module_4/ss5/bai_tap/nang_cao_quan_ly_san_pham&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;9dddc9b686e0513298ffbe18404e3240&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Tomcat 9.0.761" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.761" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATING_POLICY" value="restart-server" />
@@ -183,6 +193,7 @@
       <workItem from="1697686948373" duration="17133000" />
       <workItem from="1697772042964" duration="1431000" />
       <workItem from="1697776303849" duration="2938000" />
+      <workItem from="1698215481623" duration="14000" />
     </task>
     <servers />
   </component>

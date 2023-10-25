@@ -44,9 +44,4 @@ public class BlogService implements IBlogService{
         pageable = PageRequest.of(pageable.getPageNumber(),pageSize,sort);
         return blogRepository.findAll(pageable);
     }
-
-    @Override
-    public Page<Blog> findAll(Pageable pageable, int categoryId, String searchName) {
-        return blogRepository.findAllBy(pageable,categoryId,"%"+searchName+"%");
-    }
 }

@@ -20,7 +20,7 @@ public class CategoryService implements ICategoryService{
 
     @Override
     public Page<Category> getAllCategry(Pageable pageable) {
-        Sort sort = Sort.by(Sort.Direction.ASC, "categoryId");
+        Sort sort = Sort.by(Sort.Direction.ASC, "categoryName");
         int pageSize = 3;
         pageable = PageRequest.of(pageable.getPageNumber(),pageSize,sort);
         return categoryRepository.findAll(pageable);

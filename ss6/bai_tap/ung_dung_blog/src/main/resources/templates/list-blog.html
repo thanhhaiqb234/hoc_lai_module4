@@ -13,10 +13,10 @@
             <h1>Table List Blog</h1>
         </div>
         <div class="row" style="text-align: center ; padding-left: 30%;">
-               <button style="width: 50% ; height: 50px">
-                   <a th:href="@{/blog/form/create}" style="text-decoration: none;color: black "><h6>Create Blog</h6></a>
-               </button>
-               <br><br><br>
+            <button style="width: 50% ; height: 50px">
+                <a th:href="@{/blog/form/create}" style="text-decoration: none;color: black "><h6>Create Blog</h6></a>
+            </button>
+            <br><br><br>
         </div>
         <form th:href="@{/blog/list/}" method="get">
             <div class="col-md-6">
@@ -29,7 +29,9 @@
     <div class="row">
         <div class="col-sm-4 col-md-4" th:each="blog : ${blogPage}" style="margin-bottom: 3%;">
             <div class="card" style="width: 18rem;">
-                <img style="width: 290px ; height: 350px;object-fit: cover" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/394682310_1005307240724996_6540493857993985235_n.png?stp=dst-png_p206x206&_nc_cat=105&ccb=1-7&_nc_sid=510075&_nc_ohc=3mzt0f6BJOEAX9bK69u&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdTz24Db2u6OmtQZy3DPW4uRczqKF19Ojh9vXMAKoB2nKQ&oe=65598F66" class="card-img-top" alt="...">
+                <img style="width: 290px ; height: 350px;object-fit: cover"
+                     src="https://media.vov.vn/sites/default/files/styles/large/public/2020-10/kiem-nghiem-rau-cu-qua-2.png.jpg"
+                     class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title" th:text="${blog.blogName}"></h5>
                     <p class="card-text" th:text="${blog.blogDescribe}"></p>
@@ -44,19 +46,18 @@
 </table>
 <div style="text-align: center">
     <button>
-        <a th:if="${blogPage.hasPrevious()}" th:href="@{/blog/list/(page=${blogPage.number - 1})}">Previous</a>
+        <a th:if="${blogPage.hasPrevious()}" th:href="@{/blog/list(page=${blogPage.number - 1})}">Previous</a>
     </button>
-    <button>
-        <a th:if="${blogPage.hasNext()}" th:href="@{/blog/list/(page=${blogPage.number + 1})}">Next</a>
-    </button>
-    <small th:text="${blogPage.number + 1}" >
+    <small th:text="${blogPage.number + 1}">
     </small>
     <span>/
-
-<small th:text="${blogPage.totalPages }" >
+<small th:text="${blogPage.totalPages }">
 </small>
-        <br><br>
 </span>
+    <button>
+        <a th:if="${blogPage.hasNext()}" th:href="@{/blog/list(page=${blogPage.number + 1})}">Next</a>
+    </button>
+
 </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

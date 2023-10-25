@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+<table class="table table-hover">
+    <tr>
+        <h1 style="text-align: center ; color: blue ; margin-bottom: 5% ; margin-top: 5%">Table Song</h1>
+    </tr>
+    <div style="text-align: center">
+        <button style="width: 50%">
+            <a th:href="@{/song/form/create}" style="text-decoration: none ; color:black;">Create Song</a>
+        </button>
+    </div>
+    <tr>
+        <th>STT</th>
+        <th>Name Song</th>
+        <th>Singer</th>
+        <th>Kind Of Music</th>
+        <th></th>
+    </tr>
+    <tr th:each="song , static : ${songPage}">
+        <td th:text="${static.count}"></td>
+        <td th:text="${song.nameSong}"></td>
+        <td th:text="${song.artistName}"></td>
+        <td th:text="${song.categorySong}"></td>
+        <td>
+            <button>
+                <a th:href="@{/song/form/edit/__${song.idSong}__}" style="text-decoration: none; color: black;">Edit Song</a>
+            </button>
+        </td>
+    </tr>
+</table>
+
+<div style="text-align: center">
+        <a th:if="${songPage.hasPrevious()}" th:href="@{/song/list(page=${songPage.number - 1})}">Previous</a>
+    <span th:text="${songPage.number +1}"></span> / <span th:text="${songPage.totalPages}"></span>
+    <a th:if="${songPage.hasNext()}" th:href="@{/song/list(page=${songPage.number + 1})}">Next</a>
+</div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</html>

@@ -19,14 +19,20 @@ public class BlogController {
 
     @GetMapping("/list/{id}")
     public String getAllBlog(@PathVariable int id,
-                             @RequestParam(defaultValue = "" , required = false) String searchName,
-                             @RequestParam(defaultValue = "0",required = false)int page,
+                             Model model,
+                             Pageable pageable){
+        pageable = Pageable.ofSize(2);
+        Page<Blog> blogPage = blogService.getAllBlog(pageable);
+        model.addAttribute("blogPage",blogPage);
+        return "list-blog";
+    }
+
+    @GetMapping("/list")
+    public String getAllBlog(@RequestParam(defaultValue = "0" ,required = false)int page,
                              Pageable pageable,
+//                             @RequestParam(defaultValue = "",required = false)String searchName,
                              Model model){
 
-        pageable = PageRequest.of(page,2);
-        Page<Blog> blogPage = blogService.findAll(pageable,id , searchName);
-        model.addAttribute("blogPage" , blogPage);
         return "list-blog";
     }
 
