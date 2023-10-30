@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+<table class="table table-hover">
+    <tr>
+        <th>Stt</th>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Order</th>
+        <th>Returns</th>
+    </tr>
+    <tr th:each="book,static : ${booksList}">
+        <td th:text="${static.count}"></td>
+        <td th:text="${book.namee}"></td>
+        <td th:text="${book.quantity}"></td>
+        <td>
+            <button>
+                <a th:href="@{/order/form/__${book.id}__}" style="text-decoration: none ; color: black">Order</a>
+            </button>
+        </td>
+        <td>
+            <button>
+                <a th:href="@{/order/returns/form/__${book.id}__}" style="text-decoration: none ; color: black">Returns</a>
+            </button>
+        </td>
+    </tr>
+</table>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</html>

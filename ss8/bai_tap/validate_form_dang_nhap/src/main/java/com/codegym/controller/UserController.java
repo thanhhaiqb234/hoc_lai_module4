@@ -49,6 +49,7 @@ public class UserController {
                              Model model) {
         new UserDto().validate(userDto, bindingResult);
         if (bindingResult.hasFieldErrors()) {
+            model.addAttribute("userDto",userDto);
             return "create";
         } else {
             User user = new User();

@@ -50,6 +50,7 @@ public class SongController {
                              Model model){
         new SongDto().validate(songDto,bindingResult);
         if (bindingResult.hasFieldErrors()){
+            model.addAttribute("songDto",songDto);
             return "edit";
         }else {
             Song song = new Song();
@@ -67,9 +68,11 @@ public class SongController {
 
     @PostMapping("/create/song")
     public String createSong(@Validated @ModelAttribute SongDto songDto,
-                             BindingResult bindingResult){
+                             BindingResult bindingResult,
+                             Model model){
         new SongDto().validate(songDto,bindingResult);
         if (bindingResult.hasFieldErrors()){
+            model.addAttribute("songDto",songDto);
             return "create";
         }else {
             Song song = new Song();
