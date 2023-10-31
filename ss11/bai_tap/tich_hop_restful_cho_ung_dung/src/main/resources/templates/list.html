@@ -55,11 +55,11 @@
         function init() {
             $("#blogCard").empty();
             $.ajax({
-                url: "http://localhost:8080/api/blogs?num=" + currentPage,
+                url: "http://localhost:8080/api/blog?num=" + currentPage,
                 type: "GET",
                 dataType: "json",
                 success: function (data) {
-                    console.log("Vô zồi")
+                    console.log("kết nối xong")
                     let div = []
                     for (let i = 0; i < data.length; i++) {
                         div.push("<div>")
