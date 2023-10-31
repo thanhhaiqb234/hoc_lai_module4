@@ -22,7 +22,7 @@ public class BookController {
     @Autowired
     private IOrderService orderService;
 
-    @GetMapping("/form")
+    @GetMapping("/list")
     public String getAllBook(Model model){
         List<Books> booksList = bookService.getAllBook();
         model.addAttribute("booksList",booksList);

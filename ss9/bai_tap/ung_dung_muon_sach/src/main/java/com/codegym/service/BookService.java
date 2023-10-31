@@ -23,4 +23,15 @@ public class BookService implements IBookService{
     public Books finById(int id) {
         return bookRepository.findById(id).get();
     }
+
+    @Override
+    public void orderBook(Books books) {
+        bookRepository.save(books);
+    }
+
+    @Override
+    public void returnsBook(Books books) {
+        bookRepository.save(books);
+    }
+
 }

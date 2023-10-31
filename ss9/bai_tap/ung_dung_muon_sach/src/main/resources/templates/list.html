@@ -29,6 +29,9 @@
                 <a th:href="@{/order/returns/form/__${book.id}__}" style="text-decoration: none ; color: black">Returns</a>
             </button>
         </td>
+        <td th:if="${book.quantity == 0}" style="color: red">
+            Hiện tại sách này đã hết vui lòng chờ !
+        </td>
     </tr>
 </table>
 </body>

@@ -1,10 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-
+<div style="text-align: center">
+    <h4>Order book : <b th:text="${books.namee}"></b></h4>
+</div>
+<form th:object="${orders}" method="post" action="/order/book">
+    <div>
+        <input th:field="*{books}" style="display: none">
+    </div>
+    <div style="text-align: center">
+        <h3>Confirmation code to borrow books : <b th:text="${code}"></b></h3>
+        <input th:field="*{borrowcCode}" placeholder="Enter the confirmation code here">
+        <h4 th:text="${message}"style="color: red"></h4>
+    </div>
+    <br>
+    <div style="text-align: center">
+            <button><a th:href="@{/book/list}" style="text-decoration: none ; color: black">Canel</a></button>
+            <button type="submit">Save</button>
+    </div>
+</form>
 </body>
 </html>
