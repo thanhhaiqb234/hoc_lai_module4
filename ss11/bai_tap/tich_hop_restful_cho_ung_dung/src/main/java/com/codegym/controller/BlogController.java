@@ -8,10 +8,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.nio.file.OpenOption;
 import java.util.List;
 import java.util.Optional;
-
+@CrossOrigin("*")
 @RestController
 @RequestMapping("/api/blog")
 public class BlogController {
@@ -22,19 +21,9 @@ public class BlogController {
     @Autowired
     private IBlogService blogService;
 
-
-    @GetMapping
-    public ResponseEntity<List<Blog>> getBlog(){
-        List<Blog> blogList = blogService.getAllBlog();
-        if (blogList.isEmpty()){
-            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-        }
-        return new ResponseEntity<>(blogList,HttpStatus.OK);
-    }
-
     @GetMapping("/{id}")
-    public ResponseEntity<Blog> getBlog(@PathVariable int id){
-        Optional<Blog> blogOptional = blogService.getBlog(id);
+    public ResponseEntity<Blog> getAllBlog(@RequestParam int id){
+        Optional<Blog> blogOptional = blogService.getAllBlog(id);
         if (blogOptional.isPresent()){
             return new ResponseEntity<>(blogOptional.get(), HttpStatus.OK);
         }

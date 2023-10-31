@@ -15,7 +15,7 @@ public class BlogService implements IBlogService {
     private IBlogRepository blogRepository;
 
     @Override
-    public Optional<Blog> getBlog(int id) {
+    public Optional<Blog> getAllBlog(int id) {
         return blogRepository.findById(id);
     }
 

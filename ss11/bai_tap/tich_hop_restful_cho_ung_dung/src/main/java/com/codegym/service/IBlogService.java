@@ -7,7 +7,7 @@ import java.util.Optional;
 
 public interface IBlogService {
 
-    Optional<Blog> getBlog(int id);
+    Optional<Blog> getAllBlog(int id);
 
     List<Blog> getAllBlogId(int id);
 
