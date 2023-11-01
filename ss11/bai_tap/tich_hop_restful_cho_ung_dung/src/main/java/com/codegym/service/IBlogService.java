@@ -1,17 +1,18 @@
 package com.codegym.service;
 
 import com.codegym.model.Blog;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 import java.util.List;
 import java.util.Optional;
 
 public interface IBlogService {
 
-    Optional<Blog> getAllBlog(int id);
-
     List<Blog> getAllBlogId(int id);
 
-    List<Blog> getAllBlog();
-
     void create(Blog blog);
+    Page<Blog> blogPage(Pageable pageable);
+
+    List<Blog> getAllBlog();
 }

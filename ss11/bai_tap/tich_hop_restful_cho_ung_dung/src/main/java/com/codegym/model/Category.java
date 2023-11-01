@@ -11,7 +11,7 @@ public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String namee;
+    private String name;
     @JsonBackReference
     @OneToMany(mappedBy = "category")
     private Set<Blog> postsSet;
@@ -19,9 +19,9 @@ public class Category {
     public Category() {
     }
 
-    public Category(int id, String namee, Set<Blog> postsSet) {
+    public Category(int id, String name, Set<Blog> postsSet) {
         this.id = id;
-        this.namee = namee;
+        this.name = name;
         this.postsSet = postsSet;
     }
 
@@ -33,12 +33,12 @@ public class Category {
         this.id = id;
     }
 
-    public String getNamee() {
-        return namee;
+    public String getName() {
+        return name;
     }
 
-    public void setNamee(String namee) {
-        this.namee = namee;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Set<Blog> getPostsSet() {

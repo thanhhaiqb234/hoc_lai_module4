@@ -8,7 +8,7 @@ public class Blog {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String namee;
+    private String name;
     private String articleDescription;
     @ManyToOne
     @JoinColumn(name = "category_id", referencedColumnName = "id")
@@ -17,9 +17,9 @@ public class Blog {
     public Blog() {
     }
 
-    public Blog(int id, String namee, String articleDescription, Category category) {
+    public Blog(int id, String name, String articleDescription, Category category) {
         this.id = id;
-        this.namee = namee;
+        this.name = name;
         this.articleDescription = articleDescription;
         this.category = category;
     }
@@ -32,12 +32,12 @@ public class Blog {
         this.id = id;
     }
 
-    public String getNamee() {
-        return namee;
+    public String getName() {
+        return name;
     }
 
-    public void setNamee(String namee) {
-        this.namee = namee;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getArticleDescription() {
